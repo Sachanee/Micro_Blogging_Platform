@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\DELL\OneDrive\Desktop\BlogZone_Platform\BlogZone\venv"
+VIRTUAL_ENV= os.getenv('VIRTUAL_ENV')
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
