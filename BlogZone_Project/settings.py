@@ -1,6 +1,10 @@
 import os
 from pathlib import Path
 from dotenv import load_dotenv
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -66,12 +70,17 @@ WSGI_APPLICATION = "BlogZone_Project.wsgi.application"
 
 DATABASES = {
     "default": {
+<<<<<<< Updated upstream
         "ENGINE": "django.db.backends.mysql",
         "NAME": "blogzonedb",
         "USER": "root",
         "PASSWORD": os.getenv("DATABASE_PASSWORD"),
         "HOST": "localhost",
         "PORT": "3306",
+=======
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
+>>>>>>> Stashed changes
     }
 }
 
@@ -116,3 +125,8 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+<<<<<<< Updated upstream
+=======
+
+CRISPY_TEMPLATE_PACK = "bootstrap4"
+>>>>>>> Stashed changes
