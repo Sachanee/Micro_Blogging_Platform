@@ -11,6 +11,36 @@
             <h3 class="white-important p-2">
                 Profile
             </h3>
+            <article class="media content-section" style="height: 140px; width: 100%">
+                {% if user_profile != None %}
+                <div class="mt-2 d-flex full-width align-items-center">
+                    <img class="rounded-circle mr-3 img-fluid" style="width: 90px; height: 90px;"
+                        src="{{ user_profile.profile.image.url }}">
+                    <div>
+                        <h4 style="text-align: left" class="white-important">
+                            {{ user_profile.username }}
+                        </h4>
+                        <h6 style="text-align: left" class="email-profile">
+                            {{ user.email }}
+                        </h6>
+
+                    </div>
+                </div>
+                {% else %}
+                <div class="mt-2 d-flex full-width align-items-center">
+                    <img class="rounded-circle mr-3" style="width: 90px; height: 90px;"
+                        src="{{ user.profile.image.url }}">
+                    <div>
+                        <h4 style="text-align: left" class="white-important">
+                            {{ user.username }}
+                        </h4>
+                        <h6 style="text-align: left" class="email-profile">
+                            {{ user.email }}
+                        </h6>
+                    </div>
+                </div>
+                {% endif %}
+            </article>
         </div>
     </div>
 </div>
