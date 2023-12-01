@@ -26,7 +26,8 @@
                 <div class="collapse navbar-collapse" id="navbarToggle">
                     <div class="navbar-nav mr-auto pl-2">
                         <a class="nav-item nav-link" href="{% url 'home' %}">Home</a>
-                        <a class="nav-item nav-link" href="{% url 'Blog-about' %}">About</a>
+                        <a class="nav-item nav-link" href="{% url 'home' %}">My Profile</a>
+                        <a class="nav-item nav-link" href="{% url 'Blog-about' %}">About BlogZone</a>
                     </div>
                     <div class="navbar-nav pr-2">
                         {% if user.is_authenticated %}
