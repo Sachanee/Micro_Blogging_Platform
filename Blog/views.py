@@ -24,8 +24,10 @@ def follow(request):
 def post_delete(request):
     return render(request, "Blog/post_delete.html")
 
+def post_details(request):
+    return render(request, "Blog/post_details.html")
 
-class PostCreateView(CreateView):
+  class PostCreateView(CreateView):
     model = Post
     fields = ["content"]
     template_name = "Blog/post_new.html"
@@ -38,4 +40,4 @@ class PostCreateView(CreateView):
     def get_context_data(self, **kwargs):
         data = super().get_context_data(**kwargs)
         data["tag_line"] = "Add a new post"
-        return data
+
