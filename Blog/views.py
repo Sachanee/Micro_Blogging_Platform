@@ -1,4 +1,8 @@
 from django.shortcuts import render
+from django.views.generic import ListView, DetailView,
+from .models import Post
+
+
 
 
 # Create your views here.
@@ -17,5 +21,8 @@ def follow(request):
 
 def post_delete(request):
     return render(request, "Blog/post_delete.html")
-def post_details(request):
-    return render(request, "Blog/post_details.html")
+
+class PostDetailView(DetailView):
+    model = Post
+    template_name = 'blog/post_detail.html'
+    context_object_name = 'post'
