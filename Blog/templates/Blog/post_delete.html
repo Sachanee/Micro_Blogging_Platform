@@ -1,4 +1,5 @@
 {% extends "blog/base.html" %}
+
 {% block content %}
 <div class="container">
     <form method="POST" class="col-6 no-padding">
@@ -11,10 +12,10 @@
             <label for="additional_comments">Additional Comments:</label>
             <textarea id="additional_comments" name="additional_comments" class="form-control" rows="4"></textarea>
         </div>
-        
+
         <div class="form-group">
             <button class="btn btn-outline-primary" type="submit">Yes</button>
         </div>
     </form>
 </div>
-{% endblock content %}
+{% endblock %}
