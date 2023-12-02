@@ -17,3 +17,5 @@ def follow(request):
 
 def post_delete(request):
     return render(request, "Blog/post_delete.html")
+def post_details(request):
+    return render(request, "Blog/post_details.html")
