@@ -11,3 +11,6 @@ def about(request):
         request,
         "Blog/about.html",
     )
+
+def follow(request):
+    return render(request, "Blog/follow.html")
