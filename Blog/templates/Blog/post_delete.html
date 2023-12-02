@@ -1,1 +1,11 @@
-hellow world
+{% extends "blog/base.html" %}
+{% block content %}
+<div class="container">
+    <form method="POST" class="col-6 no-padding">
+        {% csrf_token %}
+        <fieldset class="form-group white-important">
+            Do you really want to delete
+        </fieldset>
+    </form>
+</div>
+{% endblock content %}    
