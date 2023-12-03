@@ -51,13 +51,13 @@
                     {% if user_profile != None %}
                     <div class="col-6">
                         <h3 class="white-important follow-click">
-                            <a href="{% url 'user-followers' user_profile.username %}">
+                            <a>
                                 {{ user_profile.profile.followers }}
                             </a>
                         </h3>
                     </div>
                     <div class="col-6">
-                        <a href="{% url 'user-follows' user_profile.username %}">
+                        <a>
                             <h3 class="white-important follow-click">
                                 {{ user_profile.profile.following }}
                             </h3>
@@ -84,10 +84,12 @@
             </article>
 
 
+
+
             <div class="d-flex">
                 {% if user_profile is None %}
                 <div style="margin-left: auto; margin-right:auto">
-                    <a class="btn btn-sm btn-outline-primary mb-4 mr-3 ">
+                    <a class="btn btn-sm btn-outline-primary mb-4 mr-3 " href="{% url 'post-create' %}">
                         Tweet
                     </a>
                 </div>
@@ -222,7 +224,7 @@
         </div>
     </div>
     <div class="col-12 col-md-3 dont-move">
-        <form method="post">{% csrf_token %}
+        <form action="{% url 'search' %}" method="post">{% csrf_token %}
             <div class="search-container">
                 <div class="search">
                     <input required name="search" type="text" id="zip-code-input" placeholder="Search Twitter">
@@ -231,8 +233,7 @@
         </form>
     </div>
 </div>
-<h3 class="white-important mb-3 mt-4"> Trends </h3>
-
+<hr class="mb-3 mt-4">
 
 {% if user_profile is None %}
 
@@ -240,7 +241,7 @@
 
     <div class="row ">
         <div class="col-12">
-            <h3>Users You Might Like</h3>
+            <h3> Users You Might Like</h3>
         </div>
         <ul class="col-12 mt-2">
             {% for user in all_users %}
@@ -264,6 +265,7 @@
 
 </article>
 {% endif %}
+
 </div>
 </div>
 {% endblock content %}
