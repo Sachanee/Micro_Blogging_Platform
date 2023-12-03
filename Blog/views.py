@@ -272,7 +272,7 @@ def postpreference(request, postid, userpreference):
 
                 context = {"eachpost": eachpost, "postid": postid}
 
-                return redirect("Blog-home")
+                return redirect("blog-home")
 
             elif valueobj == userpreference:
                 obj.delete()
@@ -286,7 +286,7 @@ def postpreference(request, postid, userpreference):
 
                 context = {"eachpost": eachpost, "postid": postid}
 
-                return redirect("Blog-home")
+                return redirect("blog-home")
 
         except Preference.DoesNotExist:
             upref = Preference()
@@ -310,13 +310,13 @@ def postpreference(request, postid, userpreference):
 
             context = {"eachpost": eachpost, "postid": postid}
 
-            return redirect("Blog-home")
+            return redirect("blog-home")
 
     else:
         eachpost = get_object_or_404(Post, id=postid)
         context = {"eachpost": eachpost, "postid": postid}
 
-        return redirect("Blog-home")
+        return redirect("blog-home")
 
 
 def about(request):
