@@ -22,7 +22,6 @@ from rest_framework.decorators import api_view
 from django.http.response import JsonResponse
 from rest_framework.parsers import JSONParser
 from rest_framework import status
-from django.contrib import messages
 
 
 def is_users(post_user, logged_user):
@@ -169,7 +168,7 @@ class PostCreateView(LoginRequiredMixin, CreateView):
 
     def get_context_data(self, **kwargs):
         data = super().get_context_data(**kwargs)
-        data["tag_line"] = "Add a New Post"
+        data["tag_line"] = "Add a new post"
         return data
 
 
