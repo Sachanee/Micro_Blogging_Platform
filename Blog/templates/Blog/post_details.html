@@ -82,3 +82,25 @@
                     </small>
                 </a>
             </div>
+        </article>
+        {% endfor %}
+        </div>
+        {% if user is not None %}
+            <div class="col-12 col-md-6 pl-0 pl-md-3 pr-3">
+                <h3 class="white-important mb-3">
+                    Add a comment
+                </h3>
+                <form method="POST">
+                    {% csrf_token %}
+                    <fieldset class="form-group">
+                        {{ form | crispy }}
+                    </fieldset>
+                    <div class="form-group">
+                        <button class="btn btn-outline-primary" type="submit">Submit comment</button>
+                    </div>
+                </form>
+            </div>
+        {% endif %}
+    </div>
+  </div>
+{% endblock content %}
