@@ -19,3 +19,4 @@ urlpatterns = [
     path("post/new/", PostCreateView.as_view(), name="post-create"),
     path("postdetails/", views.post_details, name="Blog-post_details"),
 
+]
