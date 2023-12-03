@@ -36,6 +36,8 @@ INSTALLED_APPS = [
     "users",
     "bootstrap4",
     "crispy_bootstrap4",
+    "allauth.account",
+    "rest_framework",
 ]
 
 MIDDLEWARE = [
@@ -46,6 +48,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "allauth.account.middleware.AccountMiddleware",
 ]
 
 ROOT_URLCONF = "BlogZone_Project.urls"
