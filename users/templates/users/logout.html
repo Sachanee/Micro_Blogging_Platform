@@ -1,15 +1,3 @@
-{% extends "Blog/base.html" %}
-{% block content %}
-<div class="container">
-    <h3 class="white-important">You've been logged out</h3>
-    <div class="pt-3">
-        <small class="text-muted">
-            Login again? <a class="ml-2" href="{% url 'login' %}">Login</a>
-        </small>
-    </div>
-</div>
-{% endblock content %}
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,13 +13,13 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="frame">
-                {% extends "Blog/base.html" %}
+                {% extends "blog/base.html" %}
                 {% block content %}
                 {% load static %}
                 <div class="container">
                     <h4 class="white-important">You've been logged out successfully!</h4>
                     <div class="pt-3">
-                        <img src="{% static 'blog\logo.png' %}" alt="Logo" class="logo" width="200px">
+                        <img src="{% static 'blog\BlogZone.png' %}" alt="Logo" class="logo" width="200px">
                         <h6 class="logout-BlogZone">BlogZone</h6>
                     </div>
                     <div class="pt-3">
