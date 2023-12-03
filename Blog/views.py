@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from blog.models import Post, Comment, Preference
+from Blog.models import Post, Comment, Preference
 from users.models import Follow, Profile
 import sys
 from django.contrib.auth.models import User
@@ -34,7 +34,7 @@ PAGINATION_COUNT = 3
 
 class PostListView(LoginRequiredMixin, ListView):
     model = Post
-    template_name = "blog/home.html"
+    template_name = "Blog/home.html"
     context_object_name = "posts"
     ordering = ["-date_posted"]
     paginate_by = PAGINATION_COUNT
@@ -72,7 +72,7 @@ class PostListView(LoginRequiredMixin, ListView):
 
 class UserPostListView(LoginRequiredMixin, ListView):
     model = Post
-    template_name = "blog/user_posts.html"
+    template_name = "Blog/user_posts.html"
     context_object_name = "posts"
     paginate_by = PAGINATION_COUNT
 
@@ -124,7 +124,7 @@ class UserPostListView(LoginRequiredMixin, ListView):
 
 class PostDetailView(DetailView):
     model = Post
-    template_name = "blog/post_detail.html"
+    template_name = "Blog/post_detail.html"
     context_object_name = "post"
 
     def get_context_data(self, **kwargs):
@@ -149,7 +149,7 @@ class PostDetailView(DetailView):
 
 class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = Post
-    template_name = "blog/post_delete.html"
+    template_name = "Blog/post_delete.html"
     context_object_name = "post"
     success_url = "/"
 
@@ -160,7 +160,7 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 class PostCreateView(LoginRequiredMixin, CreateView):
     model = Post
     fields = ["content"]
-    template_name = "blog/post_new.html"
+    template_name = "Blog/post_new.html"
     success_url = "/"
 
     def form_valid(self, form):
@@ -176,7 +176,7 @@ class PostCreateView(LoginRequiredMixin, CreateView):
 class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Post
     fields = ["content"]
-    template_name = "blog/post_new.html"
+    template_name = "Blog/post_new.html"
     success_url = "/"
 
     def form_valid(self, form):
@@ -194,7 +194,7 @@ class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 
 class FollowsListView(ListView):
     model = Follow
-    template_name = "blog/follow.html"
+    template_name = "Blog/follow.html"
     context_object_name = "follows"
 
     def visible_user(self):
@@ -212,7 +212,7 @@ class FollowsListView(ListView):
 
 class FollowersListView(ListView):
     model = Follow
-    template_name = "blog/follow.html"
+    template_name = "Blog/follow.html"
     context_object_name = "follows"
 
     def visible_user(self):
@@ -272,7 +272,7 @@ def postpreference(request, postid, userpreference):
 
                 context = {"eachpost": eachpost, "postid": postid}
 
-                return redirect("blog-home")
+                return redirect("Blog-home")
 
             elif valueobj == userpreference:
                 obj.delete()
@@ -286,7 +286,7 @@ def postpreference(request, postid, userpreference):
 
                 context = {"eachpost": eachpost, "postid": postid}
 
-                return redirect("blog-home")
+                return redirect("Blog-home")
 
         except Preference.DoesNotExist:
             upref = Preference()
@@ -310,19 +310,19 @@ def postpreference(request, postid, userpreference):
 
             context = {"eachpost": eachpost, "postid": postid}
 
-            return redirect("blog-home")
+            return redirect("Blog-home")
 
     else:
         eachpost = get_object_or_404(Post, id=postid)
         context = {"eachpost": eachpost, "postid": postid}
 
-        return redirect("blog-home")
+        return redirect("Blog-home")
 
 
 def about(request):
     return render(
         request,
-        "blog/about.html",
+        "Blog/about.html",
     )
 
 

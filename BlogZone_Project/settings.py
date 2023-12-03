@@ -36,7 +36,6 @@ INSTALLED_APPS = [
     "users",
     "bootstrap4",
     "crispy_bootstrap4",
-
 ]
 
 MIDDLEWARE = [
@@ -76,7 +75,7 @@ WSGI_APPLICATION = "BlogZone_Project.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
-        "NAME": "blogzonedb",
+        "NAME": "Blogzonedb",
         "USER": "root",
         "PASSWORD": os.getenv("DATABASE_PASSWORD"),
         "HOST": "localhost",
@@ -129,4 +128,3 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 CRISPY_TEMPLATE_PACK = "bootstrap4"
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
-
