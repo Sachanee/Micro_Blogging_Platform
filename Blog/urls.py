@@ -44,4 +44,5 @@ urlpatterns = [
         "comment/<int:pk>/delete/", CommentDeleteView.as_view(), name="comment-delete"
     ),
     path("like/<int:pk>/", LikeDetailView.as_view(), name="like-detail"),
+    path("retweet/<int:pk>/", views.retweet, name="retweet"),
 ]

@@ -327,3 +327,12 @@ class LikeDetailView(DetailView):
         liked_users = post.likes.all()  # Fetch all users who liked this post
         context["liked_users"] = liked_users
         return context
+
+
+def retweet(request, pk):
+    post = get_object_or_404(Post, id=pk)
+    if post:
+        return render(request, "Blog/retweet.html", {"post": post})
+    else:
+        messages.success(request, ("That Post Does Not Exist..."))
+        return redirect("blog-home")
