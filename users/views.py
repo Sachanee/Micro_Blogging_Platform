@@ -31,6 +31,8 @@ def profile(request):
             pform.save()
             messages.success(request, f"Account has been updated.")
             return redirect("profile")
+        else:
+            messages.error(request, "There was an error updating your account.")
     else:
         uform = UserUpdateForm(instance=request.user)
         pform = ProfileUpdateForm(instance=request.user.profile)
