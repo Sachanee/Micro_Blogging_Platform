@@ -1,6 +1,7 @@
 {% extends "Blog/base.html" %}
 {% load crispy_forms_tags %}
 {% block content %}
+
 <div class="container">
     <h3 class="white-important mb-3">
         Post
@@ -10,7 +11,7 @@
             <div style="width: 100%; word-break: break-all;">
                 <div class="pb-2 row m-0" style="width: 100%; margin-right: 0 !important;">
                     <div class="col-8 no-padding d-flex align-items-center" style="padding-left: 0px !important;">
-                        <img class="rounded-circle mr-2" style="width: 20px; height: 20px;"
+                        <img class="rounded-circle mr-2" style="width: 40px; height: 40px;"
                             src="{{ post.author.profile.image.url }}">
                         <a class="mr-2 white-important" href="{% url 'user-posts' post.author %}">
                             {{ post.author }}
@@ -40,19 +41,24 @@
     </div>
     <br>
     <!-- Liked users list -->
-    <h4 class="white-important mb-3">
-        Liked by:
-    </h4>
-    <ul> <!-- Add this <ul> tag here -->
-        {% for liked_user in post.likes.all %}
-        <li>
-            <a href="{% url 'user-posts' liked_user.username %}">
-                {{ liked_user.username }}
-            </a>
-        </li>
-        {% empty %}
-        <li>No users have liked this post yet.</li>
-        {% endfor %}
-    </ul> <!-- Closing </ul> tag -->
-</div>
-{% endblock content %}
+    <div class="container">
+        <h4 class="white-important mb-3">
+            Liked by:
+        </h4>
+        <div class='comment p-3 mb-3' style="border: 2px solid rgba(255, 255, 255, 0.2); border-radius: 10px;">
+            <ul style="list-style: none; padding: 0;">
+                {% for liked_user in post.likes.all %}
+                <li style="margin-bottom: 10px;">
+                    <img class="rounded-circle mr-2" style="width: 40px; height: 40px;"
+                        src="{{ liked_user.profile.image.url }}">
+                    <a href="{% url 'user-posts' liked_user.username %}">
+                        {{ liked_user.username }}
+                    </a>
+                </li>
+                {% empty %}
+                <li>No users have liked this post yet.</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    {% endblock content %}
