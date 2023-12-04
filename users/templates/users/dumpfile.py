@@ -11,9 +11,6 @@ from django.views.generic import (
     DeleteView,
 )
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
-from django.db.models import Count
-from .forms import NewCommentForm
-
 
 def is_users(post_user, logged_user):
     return post_user == logged_user
