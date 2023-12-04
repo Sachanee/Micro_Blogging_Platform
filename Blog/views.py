@@ -187,7 +187,7 @@ class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 
     def get_context_data(self, **kwargs):
         data = super().get_context_data(**kwargs)
-        data["tag_line"] = "Edit a post"
+        data["tag_line"] = "Edit a Post"
         return data
 
 
@@ -372,3 +372,17 @@ def post_list(request):
             {"message": "{} Posts were deleted successfully!".format(count[0])},
             status=status.HTTP_204_NO_CONTENT,
         )
+
+
+class CommentDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+    model = Comment
+    template_name = "Blog/comment_delete.html"
+    success_url = "/"
+
+    def test_func(self):
+        # Ensure only the author of the comment can delete it
+        return is_users(self.get_object().author, self.request.user)
+
+    def delete(self, request, *args, **kwargs):
+        # Perform additional actions before deleting if needed
+        return super().delete(request, *args, **kwargs)

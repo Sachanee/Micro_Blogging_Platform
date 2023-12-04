@@ -10,6 +10,7 @@ from .views import (
     FollowersListView,
     postpreference,
     post_list,
+    CommentDeleteView,
 )
 from . import views
 from django.urls import include
@@ -42,4 +43,7 @@ urlpatterns = [
     path("l/", include(router.urls)),
     path("api-auth/", include("rest_framework.urls", namespace="rest_framework")),
     path("api/posts", post_list),
+    path(
+        "comment/<int:pk>/delete/", CommentDeleteView.as_view(), name="comment-delete"
+    ),
 ]
