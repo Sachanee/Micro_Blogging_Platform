@@ -3,12 +3,12 @@ from pathlib import Path
 from dotenv import load_dotenv
 import pymysql
 
-pymysql.version_info = (1, 4, 6, "final", 0)
-pymysql.install_as_MySQLdb()
-
+# pymysql.version_info = (1, 4, 6, "final", 0)
+# pymysql.install_as_MySQLdb()
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
-load_dotenv(os.path.join(BASE_DIR, ".env"))
+# BASE_DIR = Path(__file__).resolve().parent.parent
+# load_dotenv(os.path.join(BASE_DIR, ".env"))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
@@ -77,13 +77,9 @@ WSGI_APPLICATION = "BlogZone_Project.wsgi.application"
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.mysql",
-        "NAME": "Blogzonedb",
-        "USER": "root",
-        "PASSWORD": os.getenv("DATABASE_PASSWORD"),
-        "HOST": "localhost",
-        "PORT": "3306",
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
@@ -141,3 +137,13 @@ CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
 
 LOGIN_REDIRECT_URL = "blog-home"
 LOGIN_URL = "login"
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_PORT = 587
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'yasidabro'
+EMAIL_HOST_PASSWORD = 'insika1234'
+DEFAULT_FROM_EMAIL = 'apptestingdjango@gmail.com'
+
+
