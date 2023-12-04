@@ -8,9 +8,10 @@ from .views import (
     UserPostListView,
     FollowsListView,
     FollowersListView,
-    postpreference,
+    post_like,
     post_list,
     CommentDeleteView,
+    LikeDetailView,
 )
 from . import views
 from django.urls import include
@@ -35,15 +36,12 @@ urlpatterns = [
         FollowersListView.as_view(),
         name="user-followers",
     ),
-    path(
-        "post/<int:postid>/preference/<int:userpreference>",
-        postpreference,
-        name="postpreference",
-    ),
+    path("post_like/<int:postid>", views.post_like, name="post_like"),
     path("l/", include(router.urls)),
     path("api-auth/", include("rest_framework.urls", namespace="rest_framework")),
     path("api/posts", post_list),
     path(
         "comment/<int:pk>/delete/", CommentDeleteView.as_view(), name="comment-delete"
     ),
+    path("like/<int:pk>/", LikeDetailView.as_view(), name="like-detail"),
 ]
