@@ -1,8 +1,12 @@
 {% extends "Blog/base.html" %}
+{% load static %}
 
 {% block content %}
 <div class="welcome-container">
     <h1>Welcome to Our Social Network!</h1>
+    <h1>~BlogZone~</h1>
+    <img src="{% static 'Blog/logo.png' %}" alt="Logo" class="logo" width="200px">
+    <br>
     <p>This social network was built by a team as part of a group project given by the Business Application Development
         module.</p>
     <p>Developers' names involved in this project:</p>

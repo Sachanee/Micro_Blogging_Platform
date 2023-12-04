@@ -6,10 +6,10 @@
         {% csrf_token %}
         <fieldset class="form-group white-important">
             <legend><strong>Confirmation</strong></legend>
-            Do you really want to delete..?
+            Do you really want to delete this comment?
         </fieldset>
         <p class="bg-steel p-2" style="border: 1px solid white; border-radius: 4px; word-wrap: break-word;">
-            {{ post.content }}
+            {{ comment.content }}
         </p>
 
         <div class="form-group">

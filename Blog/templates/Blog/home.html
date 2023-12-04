@@ -4,7 +4,7 @@
 <div class="row">
     <div class="col-12 col-md-3 pr-4 dont-move">
         <a href="/">
-            <h2><img class="img-fluid" width="60" src="{% static 'Blog/logo.png' %}">BlogRoom</h2>
+            <h2><img class="img-fluid" width="60" src="{% static 'Blog/logo.png' %}">BlogZone</h2>
         </a><br>
         <div class="profile-section">
             <h3 class="white-important p-2">
@@ -83,9 +83,6 @@
                 </div>
             </article>
 
-
-
-
             <div class="d-flex">
                 {% if user_profile is None %}
                 <div style="margin-left: auto; margin-right:auto">
@@ -159,25 +156,26 @@
                 <div class="row">
                     <div class="col-6" style="display: flex;">
                         <small style="opacity: 0.4;">
+                            <a href="/like/{{post.id}}/">
+                                <!-- Like Buttons Here -->
+                                {{ post.number_of_likes }} Like(s)
+                                &nbsp;&nbsp;
+                            </a>
+                            {% if user in post.likes.all %}
+                            <a href="{% url 'post_like' post.id %}">
+                                <i class="fa-solid fa-heart" style="color: rgb(255, 0, 0)"></i>
+                            </a>
+                            {% else %}
+                            <a href="{% url 'post_like' post.id %}">
+                                <i class="fa fa-heart-o" style="color:rgb(255, 0, 0)"></i>
+                            </a>
+                            {% endif %}
+                            &nbsp;&nbsp;
 
-                            <!-- Like Buttons Here -->
-                            <a href="#" onClick="document.getElementById('likebutton').submit()"><i
-                                    class="fas fa-thumbs-up"></i></a> {{post.likes}} | <a href="#"
-                                onClick="document.getElementById('dislikebutton').submit()"><i
-                                    class="fas fa-thumbs-down"></i></a> {{post.dislikes}}
-
-
-                            <form id="likebutton" method="POST" action="{% url 'postpreference' post.id 1 %}">
+                            <form id="likebutton" method="POST" action="{% url 'post_like' post.id %}">
                                 {% csrf_token %}
                                 <input type="hidden">
                             </form>
-
-                            <form id="dislikebutton" method="POST" action="{% url 'postpreference' post.id 2 %}">
-                                {% csrf_token %}
-                                <input type="hidden">
-                            </form>
-
-
                         </small>
                         <small style="opacity: 0.4; margin-left:15px;">
                             <a href="/post/{{post.id}}/">
@@ -234,20 +232,16 @@
     </div>
 </div>
 <hr class="mb-3 mt-4">
-
 {% if user_profile is None %}
-
 <article class="t-section media content-section">
-
-    <div class="row ">
-        <div class="col-12">
-            <h3> Users You Might Like</h3>
+    <div class="row">
+        <div class="col-12 text-center">
+            <h5>Users You Might Like</h5>
         </div>
         <ul class="col-12 mt-2">
             {% for user in all_users %}
             <li>
                 <div class="who-to-follow">
-
                     <div style="padding-left: 0px !important;" class="col-8 no-padding d-flex align-items-center">
                         <img class="rounded-circle mr-2" style="width: 20px; height: 20px;"
                             src="{{ user.profile.image.url }}">
@@ -260,12 +254,7 @@
             </li>
             {% endfor %}
         </ul>
-
     </div>
-
 </article>
 {% endif %}
-
-</div>
-</div>
 {% endblock content %}
