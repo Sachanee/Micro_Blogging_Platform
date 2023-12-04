@@ -9,14 +9,16 @@ from .models import Profile
 def create_profile(sender, instance, created, **kwargs):
     if created:
         Profile.objects.create(user=instance)
-
-
-@receiver(post_save, sender=User)
-def save_profile(sender, instance, created, **kwargs):
-    if created:
-        Profile.objects.create(user=instance)
     else:
         try:
             instance.profile
         except Profile.DoesNotExist:
             Profile.objects.create(user=instance)
+
+
+@receiver(post_save, sender=User)
+def save_profile(sender, instance, **kwargs):
+    try:
+        instance.profile.save()
+    except Profile.DoesNotExist:
+        Profile.objects.create(user=instance)
