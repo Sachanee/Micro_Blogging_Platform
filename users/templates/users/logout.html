@@ -1,42 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "Blog/base.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logged Out</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-</head>
-
-<body>
-
+{% block content %}
+    {% load static %}
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="frame">
-                {% extends "Blog/base.html" %}
-                {% block content %}
-                {% load static %}
-                <div class="container">
-                    <h4 class="white-important">You've been logged out successfully!</h4>
-                    <div class="pt-3">
-                        <img src="{% static 'Blog\logo.png' %}" alt="Logo" class="logo" width="200px">
-                        <h6 class="logout-BlogZone">BlogZone</h6>
-                    </div>
-                    <div class="pt-3">
-                        <small class="text-muted">
-                            Login again? <a class="ml-2" href="{% url 'login' %}">Login</a>
-                        </small>
-                    </div>
-                </div>
-                {% endblock content %}
-            </div>
-        </div>
-    </div>
-
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-</body>
-
-</html>
