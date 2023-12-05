@@ -69,3 +69,5 @@ class CustomPasswordResetConfirmView(PasswordResetConfirmView):
 class CustomPasswordResetCompleteView(PasswordResetCompleteView):
     template_name = 'users/password_reset_complete.html'
 
+def logout_confirmation(request):
+    return render(request, 'users/logout_confirmation.html')
