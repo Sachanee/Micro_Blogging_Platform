@@ -9,6 +9,7 @@
 ## Demo
 
 **1.Home Page**
+
 ![Home](https://github.com/Sachanee/Micro_Blogging_Platform/assets/147580513/dfbd3da1-0ffd-45a2-a77d-24202bb01a8e)
 
 **2. Create an Account**
@@ -30,10 +31,13 @@
 
 ![logout](https://github.com/Sachanee/Micro_Blogging_Platform/assets/147580513/21c68578-566b-4e4c-a873-7470a155e67b)
 
-
 **7.Create a Tweet**
 
 ![Create a tweet](https://github.com/Sachanee/Micro_Blogging_Platform/assets/147580513/076b42e7-2c8a-479f-99db-76c2feae2d16)
+
+**8. My Profile**
+
+![Profile](https://github.com/Sachanee/Micro_Blogging_Platform/assets/147580513/5dc10096-4ecf-4818-af58-7e4ab04a7ff5)
 
 ## Setup
 Get started by cloning the project using the following command:
