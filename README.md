@@ -14,5 +14,7 @@ Get started by cloning the project using the following command:
 4. Activate the environment with:
    - On Windows: `venv\Scripts\activate`
    - On Mac and Linux: `source venv/bin/activate`
+     
+5. Install the required dependencies with: `pip install -r requirements.txt`.
 
 
