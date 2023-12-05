@@ -125,7 +125,22 @@
                 </h6>
             </div>
         </div>
-
+&nbsp;&nbsp;
+            <div class="compose-tweet">
+                <form method="POST" action="{% url 'upload' %}" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    &nbsp;&nbsp;
+                    <textarea name="content" placeholder="What's happening?" rows="3" cols="85"
+                        style="color: black; background-color: #2D3741;"></textarea>
+                    <br>
+                    &nbsp;&nbsp;
+                    <input type="file" name="post_image">
+                    <button type="submit"
+                        style="background-color: #1DA1F2; color: white; padding: 10px 40px; font-size: 14px; border: none; border-radius: 20px;">Tweet</button>
+                </form>
+                <br>
+                <hr style="border-top: 0.5px solid #858585; margin-top: 5px;">
+</div>
         {% for post in posts %}
         <article class="media content-section hovered-tweet">
             <div style="width: 100%; word-break: break-all;">
