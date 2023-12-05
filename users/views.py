@@ -10,6 +10,7 @@ from django.contrib.auth.views import (
     PasswordResetCompleteView,
 )
 
+
 def register(request):
     if request.method == "POST":
         form = UserRegisterForm(request.POST)
@@ -54,23 +55,25 @@ def SearchView(request):
         context = {"results": results}
         return render(request, "users/search_result.html", context)
 
+
 class CustomPasswordResetView(PasswordResetView):
-    template_name = 'users/password_reset.html'
-    email_template_name = 'users/password_reset_email.html'
-    success_url = '/password-reset/done/'
+    template_name = "users/password_reset.html"
+    email_template_name = "users/password_reset_email.html"
+    success_url = "/password-reset/done/"
+
 
 class CustomPasswordResetDoneView(PasswordResetDoneView):
-    template_name = 'users/password_reset_done.html'
+    template_name = "users/password_reset_done.html"
+
 
 class CustomPasswordResetConfirmView(PasswordResetConfirmView):
-    template_name = 'users/password_reset_confirm.html'
-    success_url = '/password-reset/complete/'
+    template_name = "users/password_reset_confirm.html"
+    success_url = "/password-reset/complete/"
+
 
 class CustomPasswordResetCompleteView(PasswordResetCompleteView):
-    template_name = 'users/password_reset_complete.html'
+    template_name = "users/password_reset_complete.html"
+
 
 def logout_confirmation(request):
-    return render(request, 'users/logout_confirmation.html')
-
-def logout_confirmation(request):
-    return render(request, 'users/logout_confirmation.html')
+    return render(request, "users/logout_confirmation.html")

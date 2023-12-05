@@ -45,4 +45,5 @@ urlpatterns = [
     ),
     path("like/<int:pk>/", LikeDetailView.as_view(), name="like-detail"),
     path("retweet/<int:pk>/", views.retweet, name="retweet"),
+    path("upload", views.upload, name="upload"),
 ]

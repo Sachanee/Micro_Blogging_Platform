@@ -336,3 +336,18 @@ def retweet(request, pk):
     else:
         messages.success(request, ("That Post Does Not Exist..."))
         return redirect("blog-home")
+
+
+@login_required
+def upload(request):
+    if request.method == "POST":
+        author = request.user
+        content = request.POST.get("content")
+        image = request.FILES.get("post_image")
+
+        new_post = Post.objects.create(author=author, content=content, post_image=image)
+        new_post.save()
+
+        return redirect("/")
+    else:
+        return render(request, "blog-home.html")

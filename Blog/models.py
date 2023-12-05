@@ -9,9 +9,10 @@ class Post(models.Model):
     date_posted = models.DateTimeField(default=timezone.now)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     likes = models.ManyToManyField(User, related_name="liked_posts", blank=True)
+    post_image = models.ImageField(upload_to="post_images", blank=True)
 
     def __str__(self):
-        return self.content[:4]
+        return self.content[:6]
 
     def number_of_likes(slef):
         return slef.likes.count()

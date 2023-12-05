@@ -1,19 +1,21 @@
 {% extends "Blog/base.html" %}
-
 {% block content %}
-<div class="container">
-    <h3 class="text-danger">Logout Confirmation</h3>
-    <p>Are you sure you want to log out?</p>
-    <form method="POST" action="{% url 'home' %}" class="col-6 no-padding">
-        {% csrf_token %}
-        <div class="form-group">
-            <button class="btn btn-outline-primary" type="submit">No</button>
-            <a class="btn btn-outline-secondary" href="{% url 'home' %}">Yes, Logout</a>
+{% load static %}
+<div class="container" style="max-width: 600px;">
+    <div class="comment p-3 mb-3" style="border: 4px solid rgba(255, 255, 255, 0.2); border-radius: 20px;">
+        <h4 class="white-important mb-3">
+            Logout
+        </h4>
+        <div class="text-center">
+            <p class="mb-4" style="font-size: 18px;">Are you sure you want to logout?</p>
+            <p class="mb-4" style="font-size: 16px;">You will be returned to the login screen.</p>
+            <a class="btn btn-danger" href="{% url 'blog-home' %}">Cancel</a>
+            <a class="btn btn-secondary ml-2" href="{% url 'logout' %}">Log Out</a>
         </div>
-    </form>
+        <div class="text-center mt-5">
+            <img src="{% static 'Blog/logo.png' %}" alt="Logo" class="logo" width="200px">
+            <h6 class="mt-2 mb-0">BlogZone</h6>
+        </div>
+    </div>
 </div>
 {% endblock content %}
-            
-
-            
-   

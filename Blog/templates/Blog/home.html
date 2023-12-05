@@ -118,11 +118,28 @@
                     Tweets
                 </h3>
             </div>
+
             <div class="col-6 no-padding">
                 <h6 style="position: absolute; bottom: 0; right: 0" class="white-important mb-3">
                     {{ page_obj.start_index }} - {{ page_obj.end_index }} of
                     {{ paginator.count }}
                 </h6>
+            </div>
+            &nbsp;&nbsp;
+            <div class="compose-tweet">
+                <form method="POST" action="{% url 'upload' %}" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    &nbsp;&nbsp;
+                    <textarea name="content" placeholder="What's happening?" rows="3" cols="85"
+                        style="color: black; background-color: #2D3741;"></textarea>
+                    <br>
+                    &nbsp;&nbsp;
+                    <input type="file" name="post_image">
+                    <button type="submit"
+                        style="background-color: #1DA1F2; color: white; padding: 10px 40px; font-size: 14px; border: none; border-radius: 20px;">Tweet</button>
+                </form>
+                <br>
+                <hr style="border-top: 0.5px solid #858585; margin-top: 5px;">
             </div>
         </div>
 
@@ -153,8 +170,11 @@
                     <p class="mb-4">
                         {{ post.content }}
                     </p>
+                    {% if post.post_image %}
+                    <img src="{{ post.post_image.url }}" alt="Post Image" style="max-width: 100%; height: auto;">
+                    {% endif %}
                 </a>
-
+                &nbsp;
                 <div class="row">
                     <div class="col-6" style="display: flex;">
                         <small style="opacity: 0.4;">
