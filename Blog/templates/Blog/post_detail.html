@@ -10,7 +10,7 @@
             <div style="width: 100%; word-break: break-all;">
                 <div class="pb-2 row m-0" style="width: 100%; margin-right: 0 !important;">
                     <div class="col-8 no-padding d-flex align-items-center" style="padding-left: 0px !important;">
-                        <img class="rounded-circle mr-2" style="width: 20px; height: 20px;"
+                        <img class="rounded-circle mr-2" style="width: 40px; height: 40px;"
                             src="{{ post.author.profile.image.url }}">
                         <a class="mr-2 white-important" href="{% url 'user-posts' post.author %}">
                             {{ post.author }}
@@ -48,7 +48,7 @@
                 {% for comment in comments %}
                 <div class="comment p-3 mb-3" style="border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 5px;">
                     <div class="d-flex align-items-center">
-                        <img class="rounded-circle mr-2" style="width: 20px; height: 20px;"
+                        <img class="rounded-circle mr-2" style="width: 40px; height: 40px;"
                             src="{{ comment.author.profile.image.url }}">
                         <a class="mr-2 white-important" href="{% url 'user-posts' comment.author.username %}">
                             {{ comment.author }}

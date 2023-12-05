@@ -1,9 +1,13 @@
 {% extends "Blog/base.html" %}
 {% load crispy_forms_tags %}
 {% block content %}
+{% load static %}
+
 <div class="container">
     <h3 class="white-important">
-        Change profile data
+        Change Profile Data
+        <hr>
+        <img src="{% static 'Blog/profile.jpg' %}" alt="Logo" class="logo" width="600px">
     </h3>
     <form class="col-6 no-padding" method="POST" enctype="multipart/form-data">
         {% csrf_token %}
