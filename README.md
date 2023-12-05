@@ -1,6 +1,6 @@
 <h1 align="center"><u>Welcome to Our Social Network!</u></h1>
 
-**This social network is the collaborative creation of Sachanee, Yasinda, Sithumini, and Darshana, for a group project in the Business Application Development module**
+**This social network is the collaborative creation of _Sachanee, Yasinda, Sithumini, and Darshana,_ for a group project in the _Business Application Development_ module**
 
 ## Setup
 Get started by cloning the project using the following command:
