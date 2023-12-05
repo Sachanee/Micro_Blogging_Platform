@@ -2,3 +2,4 @@
 
 **This social network was built by a team as part of a group project given by the _Business Application Development_ module.**
 
+## Setup
