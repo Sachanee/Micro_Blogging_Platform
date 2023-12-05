@@ -8,7 +8,15 @@
  **This social network is the collaborative creation of _Sachanee, Yasinda, Sithumini, and Darshana,_ for a group project in the _Business Application Development_ module in University of Moratuwa.**
 ## Demo
 **1. Create an Account**
+
 ![Create account](https://github.com/Sachanee/Micro_Blogging_Platform/assets/147580513/b962c010-59eb-45ed-b5c0-73ba2f8b33b3)
+**2. Log-in Page**
+
+![login](https://github.com/Sachanee/Micro_Blogging_Platform/assets/147580513/559cad4d-0b99-4987-bf69-da06eb811e19)
+
+**3. About page**
+
+![About page](https://github.com/Sachanee/Micro_Blogging_Platform/assets/147580513/416041c4-32c7-462c-80ce-81e6dedbb41e)
 
 ## Setup
 Get started by cloning the project using the following command:
