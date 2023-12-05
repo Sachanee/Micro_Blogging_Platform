@@ -3,3 +3,4 @@
 **This social network was built by a team as part of a group project given by the _Business Application Development_ module.**
 
 ## Setup
+1. Git Clone the project with:
