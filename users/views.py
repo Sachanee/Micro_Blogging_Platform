@@ -71,3 +71,6 @@ class CustomPasswordResetCompleteView(PasswordResetCompleteView):
 
 def logout_confirmation(request):
     return render(request, 'users/logout_confirmation.html')
+
+def logout_confirmation(request):
+    return render(request, 'users/logout_confirmation.html')
