@@ -3,3 +3,9 @@
 {% block content %}
     {% load static %}
     <div class="container">
+        <h4 class="white-important">Logout Confirmation</h4>
+        <div class="pt-3">
+            <p>Are you sure you want to log out?</p>
+            <button class="btn btn-danger" onclick="location.href='{% url 'blog-home' %}'">No, cancel</button>
+            <a class="btn btn-secondary ml-2" href="{% url 'profile' %}">Yes, Logoutl</a>
+
