@@ -1,6 +1,8 @@
 <h1 align="center"><span style="text-decoration: none;">Welcome to Our Social Network!</span></h1>
 <h2 align="center">~BlogZone~</h2>
 
+![BlogZone Image](https://drive.google.com/file/d/1nKXWzkEfPi-_Hxc0tNyAokiGWdrst9Yy/view?usp=sharing)
+
  **This social network is the collaborative creation of _Sachanee, Yasinda, Sithumini, and Darshana,_ for a group project in the _Business Application Development_ module.**
 
 
