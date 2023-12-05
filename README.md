@@ -5,7 +5,7 @@
   <img src="https://github.com/Sachanee/Micro_Blogging_Platform/assets/147580513/9c44cf8a-538e-43fe-9f1b-7148c1aea613" alt="BlogZone Image" width="150px">
 </p>
 
- **This social network is the collaborative creation of _Sachanee, Yasinda, Sithumini, and Darshana,_ for a group project in the _Business Application Development_ module in University of Moratuwa**
+ **This social network is the collaborative creation of _Sachanee, Yasinda, Sithumini, and Darshana,_ for a group project in the _Business Application Development_ module in University of Moratuwa.**
 ## Demo
 
 ## Setup
