@@ -6,3 +6,5 @@
 Get started by cloning the project using the following command:
 
 1. Git Clone the project with:https://github.com/Sachanee/Micro_Blogging_Platform
+2. Move to the base directory: cd Django-twitter-clone
+3. 
