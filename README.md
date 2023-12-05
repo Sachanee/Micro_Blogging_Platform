@@ -18,6 +18,10 @@
 
 ![About page](https://github.com/Sachanee/Micro_Blogging_Platform/assets/147580513/416041c4-32c7-462c-80ce-81e6dedbb41e)
 
+**4. Logout confirmation Page**
+
+![Logout confirmation ](https://github.com/Sachanee/Micro_Blogging_Platform/assets/147580513/7bfb96cc-a91d-4372-9756-d1f6f5413834)
+
 ## Setup
 Get started by cloning the project using the following command:
 
