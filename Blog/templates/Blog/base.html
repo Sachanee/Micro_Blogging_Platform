@@ -40,7 +40,7 @@
                             href="{% url 'post-create' %} ">Create a Tweet</a>
                         <a class="nav-item nav-link {% if '/profile/' in request.path %}active{% endif %}"
                             href="{% url 'profile' %}">Settings</a>
-                        <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
+                        <a class="nav-item nav-link" href="{% url 'logout_confirmation' %}">Logout</a>
                         {% else %}
                         <a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
                         <a class="nav-item nav-link" href="{% url 'register-users' %}">Register</a>
