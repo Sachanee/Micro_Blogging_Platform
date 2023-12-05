@@ -6,7 +6,7 @@
 </p>
 
  **This social network is the collaborative creation of _Sachanee, Yasinda, Sithumini, and Darshana,_ for a group project in the _Business Application Development_ module.**
-
+## Demo
 
 ## Setup
 Get started by cloning the project using the following command:
