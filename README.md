@@ -18,4 +18,5 @@ Get started by cloning the project using the following command:
 5. Install the required dependencies with: `pip install -r requirements.txt`.
    
 6. Make migrations with: `python manage.py makemigrations` and then `python manage.py migrate`.
+7. Run app localy with: `python manage.py runserver`.
 
