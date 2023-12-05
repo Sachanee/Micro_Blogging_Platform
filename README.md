@@ -10,34 +10,36 @@
 
 **1.Home Page**
 
-![Home](https://github.com/Sachanee/Micro_Blogging_Platform/assets/147580513/dfbd3da1-0ffd-45a2-a77d-24202bb01a8e)
+![Userjj](https://github.com/Sachanee/Micro_Blogging_Platform/assets/147580513/d163a6e6-af89-404a-85a2-28d51b03df43)
 
-**2. Create an Account**
+**2. My Profile**
+
+![Profile](https://github.com/Sachanee/Micro_Blogging_Platform/assets/147580513/5dc10096-4ecf-4818-af58-7e4ab04a7ff5)
+
+**3. Create an Account**
 
 ![Create account](https://github.com/Sachanee/Micro_Blogging_Platform/assets/147580513/b962c010-59eb-45ed-b5c0-73ba2f8b33b3)
-**3. Log-in Page**
+
+**4. Log-in Page**
 
 ![login](https://github.com/Sachanee/Micro_Blogging_Platform/assets/147580513/559cad4d-0b99-4987-bf69-da06eb811e19)
 
-**4. About page**
+**5. About page**
 
 ![About page](https://github.com/Sachanee/Micro_Blogging_Platform/assets/147580513/416041c4-32c7-462c-80ce-81e6dedbb41e)
 
-**5. Logout confirmation Page**
+**6. Logout confirmation Page**
 
 ![Logout confirmation ](https://github.com/Sachanee/Micro_Blogging_Platform/assets/147580513/7bfb96cc-a91d-4372-9756-d1f6f5413834)
 
-**6.Logout Page**
+**7.Logout Page**
 
 ![logout](https://github.com/Sachanee/Micro_Blogging_Platform/assets/147580513/21c68578-566b-4e4c-a873-7470a155e67b)
 
-**7.Create a Tweet**
+**8.Create a Tweet**
 
 ![Create a tweet](https://github.com/Sachanee/Micro_Blogging_Platform/assets/147580513/076b42e7-2c8a-479f-99db-76c2feae2d16)
 
-**8. My Profile**
-
-![Profile](https://github.com/Sachanee/Micro_Blogging_Platform/assets/147580513/5dc10096-4ecf-4818-af58-7e4ab04a7ff5)
 
 ## Setup
 Get started by cloning the project using the following command:
