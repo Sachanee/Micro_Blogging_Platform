@@ -4,7 +4,7 @@
 <div class="container">
     <h3 class="text-danger">Logout Confirmation</h3>
     <p>Are you sure you want to log out?</p>
-    <form method="POST" action="{% url 'login' %}" class="col-6 no-padding">
+    <form method="POST" action="{% url 'home' %}" class="col-6 no-padding">
         {% csrf_token %}
         <div class="form-group">
             <button class="btn btn-outline-primary" type="submit">No</button>
@@ -12,7 +12,8 @@
         </div>
     </form>
 </div>
-{% endblock content %}
+{% endblock content %}
             
 
             
+   
