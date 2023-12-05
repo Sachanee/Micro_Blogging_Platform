@@ -21,6 +21,10 @@ urlpatterns = [
     path("profile/", users_views.profile, name="profile"),
     path("search/", users_views.SearchView, name="search"),
     path("", include("Blog.urls")),
+    path(
+        "logout-confirmation/",
+        users_views.logout_confirmation,
+        name="logout_confirmation"),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
